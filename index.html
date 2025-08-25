@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Pruebas de Software - SIS-FP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Sección de Portada -->
+        <header class="cover-page">
+            <div class="cover-content">
+                <div class="profile-card">
+                    <img src="JjMejia.jpg" alt="Foto de perfil del aprendiz" class="profile-pic">
+                    <h1 class="name">Jhon Jairo Mejia Avila</h1>
+                    <p class="role">Aprendiz en Desarrollo y Analisis de Software - Ficha 2885525</p>
+                    <p class="institution">SENA - Servicio Nacional de Aprendizaje</p>
+                </div>
+                <div class="title-card">
+                    <h2>Taller de Pruebas de Software</h2>
+                    <p class="subtitle">Análisis de la calidad en el sistema SIS-FP</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido del Taller -->
+        <main class="content-sections">
+            <section class="section">
+                <h2>1. Tipos de Pruebas de Software</h2>
+                <p>Las pruebas de software son un proceso vital para garantizar que una aplicación cumpla con sus requisitos y funcione sin errores. Existen diferentes categorías, cada una con un objetivo específico:</p>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Pruebas Funcionales</h3>
+                        <p>Verifican que cada función del software opere según las especificaciones. Se enfocan en la lógica de negocio y en las entradas/salidas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pruebas de Rendimiento</h3>
+                        <p>Miden la velocidad, la capacidad de respuesta y la estabilidad de una aplicación bajo diferentes cargas. Se evalúan métricas como el tiempo de respuesta y la escalabilidad.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pruebas de Usabilidad</h3>
+                        <p>Evalúan qué tan fácil e intuitiva es la interfaz de usuario. Se busca que la navegación sea simple y que el usuario pueda completar sus tareas sin confusión.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pruebas de Seguridad</h3>
+                        <p>Buscan vulnerabilidades en el software para protegerlo de amenazas externas. Se verifican la autenticación, la autorización y la protección de datos sensibles.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>2. Pruebas para el Proyecto SIS-FP</h2>
+                <p>Dado que el proyecto SIS-FP es un sistema de gestión portuaria integral, se recomienda un enfoque de pruebas que combine la funcionalidad con la seguridad y el rendimiento. Los tipos de pruebas clave son:</p>
+                <div class="analysis-list">
+                    <div class="analysis-item">
+                        <h4>Pruebas de Seguridad</h4>
+                        <p>Son cruciales ya que SIS-FP maneja datos sensibles (antecedentes, accesos, etc.). Es vital validar la autenticación JWT y la protección de rutas para prevenir accesos no autorizados.</p>
+                    </div>
+                    <div class="analysis-item">
+                        <h4>Pruebas de Integración</h4>
+                        <p>La arquitectura cliente-servidor con APIs RESTful exige validar la correcta comunicación entre el frontend y el backend para asegurar que los datos se envíen y reciban sin errores.</p>
+                    </div>
+                    <div class="analysis-item">
+                        <h4>Pruebas de Rendimiento</h4>
+                        <p>El "Registro de Accesos Centralizado" puede recibir muchas solicitudes simultáneas. Las pruebas de carga garantizan que el sistema responda eficientemente y no colapse en picos de uso.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>3. Demostración con Jmeter</h2>
+                <p>Se utilizó Jmeter para realizar una prueba básica de inicio de sesión, validando que el servidor responda correctamente a la solicitud de autenticación.</p>
+                <div class="jmeter-summary">
+                    <h3>Resumen de la Prueba de Login</h3>
+                    <p>El plan de pruebas en Jmeter se configuró para simular la solicitud de inicio de sesión a la API del backend, que se encuentra en <code>http://localhost:3000/api/login</code>. Se envió una petición **POST** con un cuerpo JSON que contenía el `username` y la `password` de un usuario de prueba. La prueba se ejecutó una vez.</p>
+                    <p>El resultado fue un **código de respuesta 200 (OK)**. Esto confirma que el servidor de la API está en funcionamiento y que el *endpoint* de autenticación procesó la solicitud de manera exitosa, permitiendo el inicio de sesión. Esta es una prueba fundamental para verificar la conectividad y el correcto funcionamiento de una de las partes más críticas del sistema: la autenticación.</p>
+                    <div class="image-placeholder">
+                        <p>Capturas de pantalla de las pruebas realizadas con Jmeter.</p>
+                        <img src="solicitud_inicio_de_sesion.jpg" alt="Captura de pantalla de Jmeter - solicitud inicio de sesión">
+                        <img src="arbol_de_resultados.jpg" alt="Captura de pantalla de Jmeter - arbol de resultados">
+                        <img src="informe_de_resumen.jpg" alt="Captura de pantalla de Jmeter - informe de resumen">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Taller de Pruebas de Software SIS-FP</p>
+        </footer>
+    </div>
+</body>
+</html>
