@@ -77,8 +77,8 @@
                 <p>Se utilizó Jmeter para realizar una prueba básica de inicio de sesión, validando que el servidor responda correctamente a la solicitud de autenticación.</p>
                 <div class="jmeter-summary">
                     <h3>Resumen de la Prueba de Login</h3>
-                    <p>El plan de pruebas en Jmeter se configuró para simular la solicitud de inicio de sesión a la API del backend, que se encuentra en <code>http://localhost:3000/api/login</code>. Se envió una petición **POST** con un cuerpo JSON que contenía el `username` y la `password` de un usuario de prueba. La prueba se ejecutó una vez.</p>
-                    <p>El resultado fue un **código de respuesta 200 (OK)**. Esto confirma que el servidor de la API está en funcionamiento y que el *endpoint* de autenticación procesó la solicitud de manera exitosa, permitiendo el inicio de sesión. Esta es una prueba fundamental para verificar la conectividad y el correcto funcionamiento de una de las partes más críticas del sistema: la autenticación.</p>
+                    <p>El plan de pruebas en Jmeter se configuró para simular el inicio de sesión de 6 usuarios virtuales de forma concurrente. Se enviaron múltiples peticiones `POST` al endpoint `http://localhost:3000/api/login`, cada una con credenciales únicas de usuarios previamente registrados.</p>
+                    <p>El resultado fue un éxito total: todas las solicitudes obtuvieron un código de respuesta `200 (OK)`. Esto confirma que el servicio de autenticación es robusto y puede manejar eficientemente la carga de múltiples inicios de sesión simultáneos sin presentar fallos.</p>
                     <div class="image-placeholder">
                         <p>Capturas de pantalla de las pruebas realizadas con Jmeter.</p>
                         <img src="solicitud_inicio_de_sesion.jpg" alt="Captura de pantalla de Jmeter - solicitud inicio de sesión">
