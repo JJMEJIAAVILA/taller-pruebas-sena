@@ -70,6 +70,6 @@ Se realizó una prueba de carga con 6 usuarios virtuales simulando inicios de se
 
 - **Institución:** SENA
 
-- **Enlace de la Landing Page:** 👉 jjmejiaavila.github.io/taller-pruebas-sena
+- **Enlace de la Landing Page:** 👉 [jjmejiaavila.github.io/taller-pruebas-sena](https://jjmejiaavila.github.io/taller-pruebas-sena/)
 
 📌 Este proyecto es parte del proceso formativo en el área de pruebas de software, integrando teoría y práctica con herramientas modernas de aseguramiento de la calidad.
