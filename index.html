@@ -72,8 +72,36 @@
                 </div>
             </section>
 
+            <!-- Nueva sección para pruebas unitarias -->
             <section class="section">
-                <h2>3. Demostración con Jmeter</h2>
+                <h2>3. Demostración con Pruebas Unitarias</h2>
+                <p>Para garantizar la fiabilidad del código a nivel de componente, realizamos pruebas unitarias. Estas pruebas se centran en la lógica de negocio del backend, asegurando que cada función se comporte como se espera en diferentes escenarios.</p>
+                <div class="jmeter-summary">
+                    <h3>Análisis de la Lógica de Administración de Usuarios</h3>
+                    <p>La lógica de negocio reside en el controlador `adminUserController.js`. Para validar su robustez, se probaron individualmente sus funciones, como la creación, actualización y eliminación de usuarios.</p>
+                    
+                    <div class="image-placeholder">
+                        <h4>El Código del Controlador: El cerebro de la lógica</h4>
+                        <p>Este pantallazo muestra la lógica de la función `createUser`, que maneja múltiples validaciones antes de crear un nuevo usuario.</p>
+                        <img src="codigo_controlador.jpg" alt="Pantallazo del código del controlador de usuario">
+                    </div>
+
+                    <div class="image-placeholder">
+                        <h4>Las Pruebas Unitarias: Nuestra metodología</h4>
+                        <p>Utilizamos Jest para simular las respuestas de la base de datos (con 'mocking') y probar la función en diferentes escenarios, tanto exitosos como de error.</p>
+                        <img src="codigo_prueba.jpg" alt="Pantallazo del código de las pruebas unitarias">
+                    </div>
+
+                    <div class="image-placeholder">
+                        <h4>El Resultado Final: Prueba de Confiabilidad</h4>
+                        <p>La ejecución de las pruebas unitarias confirma que toda nuestra lógica es sólida, garantizando que las operaciones de usuario sean confiables.</p>
+                        <img src="resultados_jest.jpg" alt="Pantallazo de los resultados de Jest">
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>4. Demostración con Jmeter</h2>
                 <p>Se utilizó Jmeter para realizar una prueba básica de inicio de sesión, validando que el servidor responda correctamente a la solicitud de autenticación.</p>
                 <div class="jmeter-summary">
                     <h3>Resumen de la Prueba de Login</h3>
